@@ -5,11 +5,13 @@ import aiocron
 # Init Stuff
 TOKEN = open('token.txt').readline()
 client = discord.Client()
-CHANNEL = 954114697060298782
+CHANNEL = 123456789 # Enter channel ID of channel you want coco quotes to appear (123456789) is not 
+                    # a legit channel id
 
 
 # Send Message
-@aiocron.crontab('52 0 * * *')
+# cron format:  (min hr day month year day-of-week)
+@aiocron.crontab('52 0 * * *') # edit these crom tab parameters to set time quotes get sent
 async def quote():
     await client.wait_until_ready()
     channel = client.get_channel(CHANNEL)
