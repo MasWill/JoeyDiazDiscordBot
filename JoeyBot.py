@@ -33,7 +33,7 @@ async def on_message(message):
 
     if message.channel.name == 'general':
         if usermsg.lower() == 'ayo':
-            await message.channel.send('whats up cocksukka')
+            await message.channel.send('whats up')
             return
 
 
